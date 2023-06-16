@@ -7,10 +7,12 @@ import Acomodacao from "../modelos/acomodacao";
 export default class ListagemAcomodacoes extends Processo {
     private acomodacoes: Acomodacao[]
     private impressor!: Impressor
+
     constructor() {
         super()
         this.acomodacoes = Armazem.InstanciaUnica.Acomodacoes
     }
+    
     processar(): void {
         console.clear()
         console.log('Iniciando a listagem das acomodações ofertadas...')

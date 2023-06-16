@@ -1,8 +1,9 @@
-import Processo from "../abstracoes/processo";
-import Armazem from "../dominio/armazem";
-import Cliente from "../modelos/cliente";
-import CadastrarDocumentosCliente from "./cadastroDocumentosCliente";
-import CadastroEnderecoTitular from "./cadastroEnderecoTitular";
+import Processo from "../../../abstracoes/processo"
+import Armazem from "../../../dominio/armazem"
+import Cliente from "../../../modelos/cliente"
+import CadastrarTelefonesCliente from "../../telefone/cadastroClienteTelefone"
+import CadastrarDocumentosCliente from "../../documento/cadastrarDocumentosCliente"
+import CadastroEnderecoTitular from "../../endereco/cadastroEnderecoTitular"
 
 export default class CadastroClienteTitular extends Processo {
     processar(): void {
@@ -15,12 +16,15 @@ export default class CadastroClienteTitular extends Processo {
         this.processo = new CadastroEnderecoTitular(cliente)
         this.processo.processar()
 
+        this.processo = new CadastrarTelefonesCliente(cliente)
+        this.processo.processar()
+
         this.processo = new CadastrarDocumentosCliente(cliente)
         this.processo.processar()
 
         let armazem = Armazem.InstanciaUnica
         armazem.Clientes.push(cliente)
 
-        console.log('Finalizando o cadastro do cliente...')
+        console.log('Finalizando o cadastro do cliente titular...')
     }
 }
