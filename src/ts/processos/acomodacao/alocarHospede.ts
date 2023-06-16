@@ -1,8 +1,8 @@
-import Processo from "../abstracoes/processo";
-import Armazem from "../dominio/armazem";
-import { TipoDocumento } from "../enumeracoes/TipoDocumento";
-import Acomodacao from "../modelos/acomodacao";
-import Cliente from "../modelos/cliente";
+import Processo from "../../abstracoes/processo";
+import Armazem from "../../dominio/armazem";
+import { TipoDocumento } from "../../enumeracoes/TipoDocumento";
+import Acomodacao from "../../modelos/acomodacao";
+import Cliente from "../../modelos/cliente";
 
 export default class AlocarCliente extends Processo{
 

@@ -4,10 +4,10 @@ import TipoCadastroCliente from "./cliente/cadastro/tipoCadastroCliente"
 import DeletarCliente from "./cliente/deletar/deletarCliente"
 import TipoEditarClientes from "./cliente/editar/tipoEditarClientes"
 import TipoListagemClientes from "./cliente/listagem/tipoListagemClientes"
-import ListagemAcomodacoes from "./listagemAcomodacoes"
-import ListagemHospedes from "./listagemHospedes"
-import HosperCliente from "./alocarHospede"
-import EncerrarHospedagem from "./encerrarHospedagem"
+import ListagemAcomodacoes from "./acomodacao/listagemAcomodacoes"
+import ListagemHospedes from "./acomodacao/listagemHospedes"
+import HosperdarCliente from "./acomodacao/alocarHospede"
+import EncerrarHospedagem from "./acomodacao/encerrarHospedagem"
 export default class Principal extends Processo {
     
     constructor() {
@@ -40,14 +40,14 @@ export default class Principal extends Processo {
                 this.processo.processar()
                 break
             case 6:
-                this.processo = new HosperCliente()
+                this.processo = new HosperdarCliente()
                 this.processo.processar()
                 break
             case 7:
                 this.processo = new ListagemAcomodacoes()
                 this.processo.processar()
                 break
-            case 4:
+            case 8:
                 this.processo = new EncerrarHospedagem()
                 this.processo.processar()
                 break

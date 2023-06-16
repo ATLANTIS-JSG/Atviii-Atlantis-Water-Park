@@ -8,7 +8,7 @@ export default class Cliente {
     private nomeSocial: string
     private dataNascimento: Date
     private dataCadastro: Date
-    private acomodacao!: Acomodacao
+    private acomodacao!: Acomodacao | undefined;
     private telefones: Telefone[] = []
     private endereco!: Endereco
     private documentos: Documento[] = []
@@ -39,8 +39,8 @@ export default class Cliente {
         return this.dataCadastro 
     }
 
-    public get Acomodacao() { 
-        return this.acomodacao 
+    public get Acomodacao(): Acomodacao | undefined {
+        return this.acomodacao;
     }
 
     public get Endereco() { 
@@ -75,8 +75,8 @@ export default class Cliente {
         this.dataNascimento = dataNascimento;
     }
 
-    public set Acomodacao(acomodacao: Acomodacao) { 
-        this.acomodacao = acomodacao 
+    public set Acomodacao(value: Acomodacao | undefined) {
+        this.acomodacao = value;
     }
 
     public set Endereco(endereco: Endereco) {

@@ -1,12 +1,12 @@
-import Processo from "../abstracoes/processo";
-import Armazem from "../dominio/armazem";
-import Acomodacao from "../modelos/acomodacao";
-import DiretorCasalSimples from "../diretores/diretorCasalSimples"
-import DiretorFamiliaMais from "../diretores/diretorFamiliaMais"
-import DiretorFamiliaSimples from "../diretores/diretorFamiliaSimples"
-import DiretorFamiliaSuper from "../diretores/diretorFamiliaSuper"
-import DiretorSolteiroMais from "../diretores/diretorSolteiroMais"
-import DiretorSolteiroSimples from "../diretores/diretorSolteiroSimples"
+import Processo from "../../abstracoes/processo";
+import Armazem from "../../dominio/armazem";
+import Acomodacao from "../../modelos/acomodacao";
+import DiretorCasalSimples from "../../diretores/diretorCasalSimples"
+import DiretorFamiliaMais from "../../diretores/diretorFamiliaMais"
+import DiretorFamiliaSimples from "../../diretores/diretorFamiliaSimples"
+import DiretorFamiliaSuper from "../../diretores/diretorFamiliaSuper"
+import DiretorSolteiroMais from "../../diretores/diretorSolteiroMais"
+import DiretorSolteiroSimples from "../../diretores/diretorSolteiroSimples"
 
 export default class CadastroAcomodacoes extends Processo {
     private acomodacoes: Acomodacao[]
