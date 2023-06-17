@@ -17,18 +17,16 @@ export default class CadastrarDocumentosCliente extends Processo {
     processar(): void {
         console.log('Inciando o cadastro de documentos...')
         while (this.execucao) {
+            this.processo = new CadastroCpf(this.cliente)
+                this.processo.processar()
             this.menu.mostrar()
             this.opcao = this.entrada.receberNumero('Qual opção desejada?')
             switch (this.opcao) {
                 case 1:
-                    this.processo = new CadastroCpf(this.cliente)
-                    this.processo.processar()
-                    break
-                case 2:
                     this.processo = new CadastroRg(this.cliente)
                     this.processo.processar()
                     break
-                case 3:
+                case 2:
                     this.processo = new CadastroPassaporte(this.cliente)
                     this.processo.processar()
                     break

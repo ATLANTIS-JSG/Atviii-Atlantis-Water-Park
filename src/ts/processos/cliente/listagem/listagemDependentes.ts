@@ -19,7 +19,7 @@ export default class ListagemDepedentes extends Processo {
     processar(): void {
       console.clear();
         let titular = this.entrada.receberTexto(`Digite o CPF do cliente titular: `)
-        console.log("Iniciando a listagem de dependentes por titular especifico...")
+        console.log("Iniciando a listagem de clientes dependentes para um titular específico...")
         this.clientes.map((cliente) => {
           cliente.Documentos.filter((doc) => {
             if (doc.Numero === titular) {

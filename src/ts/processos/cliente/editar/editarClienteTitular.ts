@@ -51,23 +51,15 @@ export default class EditarClientes extends Processo {
                 this.processo.processar()
                 break
               case 4:
-                this.processo = new EditarEndereco(cliente)
+                this.processo = new EditarTelefone(cliente);
                 this.processo.processar()
                 break
               case 5:
-                this.processo = new EditarDocumento(cliente)
+                this.processo = new EditarEndereco(cliente)
                 this.processo.processar()
                 break
               case 6:
-                this.processo = new EditarTelefone(cliente)
-                this.processo.processar()
-                break
-              case 7:
-                this.processo = new CadastrarTelefone(cliente)
-                this.processo.processar()
-                break
-              case 8:
-                this.processo = new CadastrarDocumento(cliente)
+                this.processo = new EditarDocumento(cliente)
                 this.processo.processar()
                 break
               case 0:

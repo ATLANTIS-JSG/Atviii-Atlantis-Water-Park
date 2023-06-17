@@ -19,7 +19,7 @@ export default class ConstrutorAcomodacao implements Construtor<Acomodacao>{
 
     construir(): Acomodacao {
         let acomodacao = new Acomodacao(this.nomeAcomodacao, this.camaSolteiro,
-            this.camaCasal, this.suite, this.climatizacao, this.garagem)
+            this.camaCasal, this.climatizacao, this.garagem, this.suite)
         return acomodacao
     }
 }

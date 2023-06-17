@@ -13,11 +13,6 @@ export default class MenuEditarCliente implements Menu {
     console.log(`| 5 - Endereço`);
     console.log(`| 6 - Documentos`);
     console.log(`----------------------`);
-    console.log(`| Adicionar? `)
-    console.log(`----------------------`);
-    console.log(`| 7 - Telefones`);
-    console.log(`| 8 - Documentos`);
-    console.log(`----------------------`);
     console.log(`| 0 - Sair`)
     console.log(`----------------------`);
   }
